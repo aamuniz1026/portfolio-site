@@ -39,17 +39,17 @@ body {
 }
 
 .hero-info-container{
-	padding-top: 30px;
+	width: 100%;
 }
 
 .profile-img-container{
 	display: flex;
+	justify-content: center;
 
 }
 
 .profile-img{
 	width: 50%;
-	margin: auto;
 	border: 1px solid rgba(66, 141, 253, 0.2);
 	border-radius: 12px;
 	box-shadow: -18px -18px 42px rgba(66, 141, 253, 0.18), 18px 18px 42px rgba(4, 28, 89, 0.24);
@@ -83,12 +83,16 @@ body {
 
 .nav{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
 	flex-wrap: wrap;
-	height: 42px;
 	text-decoration: none;
 	color: #000000;
 	z-index: 1001;
+}
+
+.nav-logo{
+	width: 160px;
 }
 
 .navUl{
@@ -120,10 +124,9 @@ body {
 
 .nav-li{
 	display: inline-block;
-color: : #000000;
- float: left;
+color: #000000;
  padding-left: 60px;
- font-size: 1.4rem;
+ font-size: 1.2rem;
  text-decoration: none;
  cursor: pointer;
 }
@@ -138,13 +141,28 @@ color: : #000000;
 /*COPY*/
 
 .hero-text{
-	font-size: 42pt;
+	margin: 0;
+	font-size: 52px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-weight: 700;
+	line-height: 33px;
+	color: #374151;
+}
+
+.hero-copy{
+	font-family: 'Roboto' sans-serif;
+	font-size: 24px;
+	line-height: 36px;
+	color: #374151;
 }
 
 .body-copy{
 	font-family: 'Roboto' sans-serif;
-	font-size: 18pt;
-	line-height: 1.7em;
+	font-size: 20px;
+	line-height: 28px;
+	margin-bottom: 28px;
+	color: #374151;
 }
 
 a {
@@ -166,54 +184,46 @@ a {
 	transition: all ease .2s;
 }
 
-h1{
-	margin-top: 18px;
-	margin-bottom: 6px;
-}
-
-h2{
-	margin-top: 0 12px;
+.main-header{
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 32px;
+	color: #374151;
 }
 
 h3{
 	font-weight: 700;
-	font-size: 1.3em;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #9CA3AF;
 	margin: 0;
-	padding-top: 36px;
-	padding-bottom: 18px;
+	padding-bottom: 12px;
 }
 
-hr{
+.full-hr{
 	border: 1px solid;
-	margin-bottom: 30px;
+	margin-bottom: 48px;
 	width: 100%;
 }
 
 ul{
+	padding-top: 20px;
 	padding-left: 18px;
+	line-height: 24px;
+	margin: 0;
 }
 
-.coming-soon-text{
-	font-size: 1.5em;
+p{
+	padding: 0;
+	margin: 0;
 }
-
-.role{
-	font-size: 36px;
-}
-
-.titles{
-	font-size: 24pt;
-	font-weight: 500;
-	font-family: 'Roboto Slab', serif;
-	padding-bottom: 12px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
 
 
 .small-copy{
-	font-size: 1.2em;
+	font-size: 16px;
 	line-height: 2rem;
 	margin: 0;
 
@@ -294,15 +304,67 @@ ul{
 	width: 375px;
 	height: 250px;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
 	border-radius: 12px;
-	transition: transform .2s;
+	border: solid 1px #E5E7EB;
+	transition: all .5s ease;
+	background-image: url('assets/artist-bio-mockup.jpg'); 
+	background-size: cover;
+	color: #FFFFFF;
 }
 
 .project-card:hover{
 	transform: scale(1.05);
+	background: linear-gradient(243.64deg, #5666BB 0%, #1BBBF1 100%);
+}
+
+.project-card:hover .project-card-text{
+	display: inline-block;
+}
+
+.project-card-text{
+	font-size: 1.5em;
+	display: none;
+}
+
+.project-card-2{
+	width: 375px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+	border: solid 1px #E5E7EB;
+	transition: all .5s ease;
+	background-image: url('assets/backup-payments-card.png'); 
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+.project-card-2:hover{
+	transform: scale(1.05);
+	background: linear-gradient(243.64deg, #FC6021 0%, #172B85 100%);
+}
+
+.project-card-2:hover .project-card-text-2{
+	display: inline-block;
+}
+
+.project-card-text-2{
+	font-size: 1.5em;
+	display: none;
+}
+
+
+
+.project-img-background{
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .coming-soon{
@@ -323,40 +385,10 @@ ul{
 	transform: scale(1.05);
 }
 
-.project-img-1{
-	width: 185px;
-	margin: auto;
-	position: relative;
-
-}
-.project-img-2{
-	width: 275px;
-	margin: auto;
-	/*top: 45%;*/
-	position: relative;
-
+.coming-soon-text{
+	font-size: 1.5em;
 }
 
-.project-img-3{
-	width: 132px;
-	margin: auto;
-	position: relative;
-
-}
-
-.blue-bg{
-	padding: 36px;
-	background: linear-gradient(164.39deg, #1D5794 17.45%, #3C90DB 119.18%);
-	color: #fff;
-
-}
-
-.bleed-img{
-	width: 100%;
-	box-shadow: 12px 18px 12px rgba(0, 0, 0, 0.02);
-	border: 1px solid #F2F2F2;
-	border-radius: 12px;
-}
 
 /*RESUME ON ABOUT PAGE*/
 
@@ -378,6 +410,7 @@ ul{
 	font-size: 1em;
 	display: flex;
 	flex-direction: column;
+	row-gap: 12px;
 	justify-content: flex-start;
 }
 
@@ -394,17 +427,14 @@ ul{
 .resume-hr{
 	width: 50px;
 	margin-left: 0;
-	margin-bottom: 18px;
 	border: 1px solid black;
 }
 
-/*END OF ABOUT PAGE*/
 
 .end-about{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	/*flex-wrap: wrap;*/
 	margin-top: 30px;
 }
 
@@ -413,11 +443,23 @@ ul{
 	padding-right: 32px;
 }
 
+.adding{
+	font-size: 20px;
+	line-height: 28px;
+	color: #374151;;
+}
+
 .film-pic{
 	max-width: 520px;
 	border-radius: 12px;
 	box-shadow: -6px -6px 18px rgba(75, 88, 103, 0.12), 6px -2px 18px #D6B680;
 }
+
+.film-pic-caption{
+	padding-top: 8px;
+}
+
+/*END OF ABOUT PAGE*/
 
 /*CONTACT*/
 
@@ -446,19 +488,123 @@ ul{
 	cursor: pointer;
 }
 
-.project-hero-1{
-	width: 100%;
-	height: 500px;
-	border: 1px solid #F2F2F2;
+/*ARTIST BIO AUTOMATION BEGIN*/
+
+.project-hero{
+	display: flex;
+	flex-direction: row;
+	column-gap: 120px;
+	margin-top: 120px;
+	margin-bottom: 88px;
+}
+
+.mockup-container{
+	display: flex;
+	flex-direction: row;
+	/*width: 520px;*/
+	column-gap: 32px;
+	justify-content: center;
+}
+
+.artistbio-mockup{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
 	box-sizing: border-box;
-	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
-	background: linear-gradient(164.39deg, #1D5794 17.45%, #3C90DB 119.18%);
+	margin-bottom: 32px;
+	padding: 0;
+}
+
+.artistbio-mockup2{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin-top: 32px;
+	padding: 0;
+}
+
+.artistbio-desktop{
+	max-width: 100%;
+	max-height: 100%;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+
+}
+
+.artistbio-blurb-container{
+	display: flex;
+	flex-direction: column;
+}
+
+.role-li{
+	font-size: 16px;
+	line-height: 28px;
+	padding-top: 0;
+}
+
+.ux-stage{
+	width: 200px;
+	padding: 12px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #9CA3AF;
+	border: solid 1px #9CA3AF;
+	border-radius: 6px;
+}
+
+.ux-h3{
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #374151;
+	text-transform: none;
+	padding: 0;
+}
+
+.uxtitle-wrapper{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	position: relative;
-	z-index: 1000;
 }
+
+.uxflow-wrapper{
+	display: flex;
+	column-gap: 12px;
+	justify-content: center;
+	margin-bottom: 60px;
+	padding: 30px;
+}
+
+.ux-timeline-hr{
+	border: 0;
+	border-bottom: 1px solid #E5E7EB;
+	height: 1px;
+	align-self: center;
+	max-width: 120px;
+	margin: 0;
+}
+
+.backup-payment-mockup{
+	max-width: 600px;
+	height: 345px;
+}
+
+.card-mockup{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.card-mockup2{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 0;
+	margin-left: 32px;
+}
+
 
 
 /*FOOTER*/
@@ -544,6 +690,39 @@ ul{
 	font-size: 3em;
 }
 
+.project-hero{
+	display: flex;
+	flex-direction: column-reverse;
+	row-gap: 60px;
+	margin-top: 24px;
+	margin-bottom: 88px;
+}
+
+.mockup-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 32px;
+}
+
+.project-card{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	margin-bottom: 24px;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+	border: solid 1px #E5E7EB;
+	transition: all .3s ease;
+	background-image: url('assets/artist-bio-mockup.jpg'); 
+	background-size: cover;
+	color: #FFFFFF;
+}
+
 }
 
 
@@ -572,7 +751,7 @@ ul{
 
 .nav{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	height: 60px;
@@ -669,12 +848,6 @@ ul{
 .small-copy{
 	font-size: 18px;
 	margin: 0;
-}
-
-hr{
-	border: 1px solid;
-	margin-bottom: 36px;
-	width: 100%;
 }
 
 ul{
@@ -789,7 +962,7 @@ a {
 
 .resume-hr{
 	width: 50px;
-	margin: auto;
+	margin: 0;
 	border: 1px solid black;
 }
 
@@ -820,28 +993,7 @@ a {
 	flex-direction: column;
 }
 
-/*.mixea-bleed-img{
-	width: 100%;
-	height: 200px;
-	background-image: url(assets/mixea-ui.png);
-	background-size: cover;
-}*/
 
-.mixea-bleed-img{
-	/*width: 100vw;*/
-	position: relative;
-	margin-left: 36px;
-	height: 300px;
-	overflow-x: hidden;
-}
-
-.bleed-img{
-	width: 500px;
-	box-shadow: 0px 18px 12px rgba(0, 0, 0, 0.02);
-	border: 1px solid #F2F2F2;
-	border-radius: 6px;
-
-}
 
 .blue-bg{
 	padding: 24px 36px;
@@ -850,34 +1002,123 @@ a {
 
 }
 
-.mixea-flow{
-	margin-top: 36px;
-	width: 100vw;
+/*ARTIST BIO MOBILE*/
+
+.project-hero{
+	display: flex;
+	flex-direction: column-reverse;
+	row-gap: 60px;
+	margin-top: 24px;
+	margin-bottom: 88px;
 }
 
 .mockup-container{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 36px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.iphone-mockup{
-	width: 150px;
+.artistbio-mockup{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin-bottom: 32px;
+	padding: 0;
 }
 
-.iphone-mockup2{
-	width: 150px;
-	position: relative;
+.artistbio-mockup2{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin-top: 32px;
+	padding: 0;
 }
 
-.mackbook-mockup{
-	width: 300px;
-	margin: auto;
+.artistbio-desktop{
+	max-width: 100%;
+	max-height: 100%;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+
 }
 
-.big-text{
-	font-size: 2em;
+.artistbio-blurb-container{
+	display: flex;
+	flex-direction: column;
+}
+
+.role-li{
+	font-size: 16px;
+	line-height: 28px;
+	padding-top: 0;
+}
+
+.ux-stage{
+	width: 200px;
+	padding: 12px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #9CA3AF;
+	border: solid 1px #9CA3AF;
+	border-radius: 6px;
+	flex: none;
+}
+
+.ux-h3{
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #374151;
+	text-transform: none;
+	padding: 0;
+}
+
+.uxtitle-wrapper{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.uxflow-wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 12px;
+	justify-content: center;
+	margin-bottom: 60px;
+}
+
+.ux-timeline-hr{
+	border: 0;
+	border-bottom: 1px solid #E5E7EB;
+	height: 1px;
+	align-self: center;
+	max-width: 120px;
+	margin: 0;
+}
+
+.backup-payment-mockup {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-mockup{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.card-mockup2{
+	max-width: 280px;
+	border: 1px solid #9CA3AF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 0;
+	margin-left: 32px;
 }
 
 .footer {
